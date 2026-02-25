@@ -51,7 +51,7 @@ const Hero = ({ formRef }: { formRef: React.RefObject<HTMLElement | null> }) => 
             <span className="relative inline-block">
               <button className="absolute -top-10 sm:-top-12 md:-top-14 left-0 shadow-lg rounded-full backdrop-blur-xs p-3 md:p-4 transition-all duration-300 hover:scale-110">
                 <img
-                  src="/icone_legnet.png"
+                  src="icone_legnet.png"
                   alt="Legnet"
                   className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 drop-shadow-[0_0_10px_#c5ff00]"
                 />

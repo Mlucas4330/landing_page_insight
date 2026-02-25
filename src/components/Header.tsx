@@ -5,7 +5,7 @@ const Header = ({ scrollToForm }: { scrollToForm: () => void }) => {
         <div className="flex items-center gap-2 md:gap-4">
           <button className="h-10 w-10 md:h-14 md:w-14 flex items-center justify-center hover:shadow-xl cursor-pointer transition-all duration-300 hover:scale-110 rounded-full backdrop-blur-xs shadow-lg">
             <img
-              src="/icone_legnet.png"
+              src="icone_legnet.png"
               alt="Legnet"
               className="w-6 h-6 md:w-8 md:h-8 drop-shadow-[0_0_10px_#c5ff00]"
             />
