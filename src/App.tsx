@@ -1,4 +1,4 @@
-import { ChevronDown, LucideX } from 'lucide-react';
+import { ChevronDown, LucideX, FileSearch, BookOpen, Cpu } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
@@ -44,25 +44,25 @@ function App() {
         {/* Seção para empresas */}
         <section className="mx-4 md:mx-8 px-4 md:px-8 my-10 md:my-16 py-10 md:py-16 bg-white rounded-3xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">
-            Para empresas, gestores e profissionais de conformidade legal
+            Gestor, serviço humano valida o passado. O Insight constrói e mantém a conformidade no presente e no futuro.
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl font-light text-center max-w-3xl mx-auto mb-8 md:mb-12">
-            Empresas que precisam garantir conformidade legal de forma simples, rápida e automatizada agora têm uma solução definitiva.
+            Validar evidência manualmente é uma fotografia do passado. Conformidade legal exige monitoramento vivo, orientação contínua e tomada de decisão assistida.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className="shadow-md p-5 md:p-6 rounded-xl">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Atendimento 24 Horas</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Serviço humano valida o que já aconteceu.</h3>
               <p className="font-light text-sm md:text-base">
-                O Insight acessa a maior base de evidências legais do Brasil para indicar as melhores práticas e garantir conformidade sem esforço.
+                O Insight evita que a não conformidade aconteça, orientando antes, durante e depois, e reduzindo a dependência de validação humana.
               </p>
             </div>
 
             <div className="shadow-md p-5 md:p-6 rounded-xl">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Automação Inteligente</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Múltiplos requisitos atendidos em apenas dois cliques</h3>
               <p className="font-light text-sm md:text-base">
-                Elimine processos manuais, gere planos de ação e atenda requisitos legais com apenas dois cliques.
+                Uma única evidência pode responder simultaneamente a requisitos ambientais, trabalhistas e de saúde e segurança. O Insight identifica essas conexões automaticamente.
               </p>
             </div>
           </div>
@@ -71,68 +71,49 @@ function App() {
         {/* Seção de features */}
         <section className="py-10 md:py-16 px-4 md:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">
-            O Insight transforma a gestão de requisitos legais<br className="hidden sm:block" />
-            em um processo simples e automatizado
+            O que você realmente ganha com o Insight?
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-light text-center max-w-3xl mx-auto mb-8 md:mb-12">
-            Tudo isso dentro de um ambiente seguro e confiável para sua empresa.
+            O especialista digital que trabalha 24h para a sua empresa.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl">
               <div className="flex justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#c5ff00]">
-                  <path d="M12 3v12"></path>
-                  <path d="m8 11 4 4 4-4"></path>
-                  <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4"></path>
-                </svg>
+                <FileSearch size={32} className="text-[#c5ff00]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Automação sem complicações</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Avaliação e Validação Inteligente</h3>
               <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
-                Automação que qualquer equipe pode usar
+                O sistema orienta antes, durante e depois — não apenas valida no final.
               </p>
               <p className="font-light text-sm md:text-base">
-                O Insight automatiza a conformidade legal da sua empresa, eliminando processos manuais e reduzindo esforço, sem necessidade de expertise técnica.
+                O Insight analisa o contexto do requisito, sugere evidências aderentes à legislação, cria automaticamente planos de ação e documentos, e reduz drasticamente o risco de evidência fraca ou inválida.
               </p>
             </div>
 
             <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl">
               <div className="flex justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#c5ff00]">
-                  <path d="M12 22v-5"></path>
-                  <path d="M9 8V2"></path>
-                  <path d="M15 8V2"></path>
-                  <path d="M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M12 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M20 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M4 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M12 16a4 4 0 0 1 0-8"></path>
-                  <path d="M9 17.93a4 4 0 0 1-5 0"></path>
-                  <path d="M20 17.93a4 4 0 0 1-5 0"></path>
-                </svg>
+                <BookOpen size={32} className="text-[#c5ff00]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Regularização com dois cliques</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Biblioteca viva com 33 anos de evidências</h3>
               <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
-                Acelere seus processos de regularização
+                O usuário não precisa saber o que provar. O sistema já sabe.
               </p>
               <p className="font-light text-sm md:text-base">
-                O Insight utiliza 33 anos de evidências legais para criar planos de ação e indicar documentos necessários em segundos, garantindo conformidade sem incertezas.
+                Evidências construídas ao longo de 33 anos de prática legal, atualizadas conforme mudanças de leis e interpretações. Elimina tentativa e erro do usuário.
               </p>
             </div>
 
             <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl sm:col-span-2 lg:col-span-1">
               <div className="flex justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#c5ff00]">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
+                <Cpu size={32} className="text-[#c5ff00]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Decisões Seguras</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">A máquina trabalha para o usuário</h3>
               <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
-                Garanta segurança jurídica e evite multas
+                Enquanto outros sistemas pedem trabalho, o Insight entrega decisão.
               </p>
               <p className="font-light text-sm md:text-base">
-                Com a maior base de evidências legais do Brasil, o Insight sugere as melhores práticas para garantir conformidade de forma automática e segura.
+                O usuário não alimenta o sistema. O sistema alerta, sugere, organiza, valida e direciona — com linguagem não jurídica, fluxo guiado e ideal para quem não é advogado nem consultor.
               </p>
             </div>
           </div>
@@ -161,13 +142,13 @@ function App() {
             <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-4">
               <details className="group">
                 <summary className="flex justify-between items-center font-normal cursor-pointer list-none p-3 md:p-4">
-                  <span className="text-base md:text-lg font-bold">Como o Insight ajuda no atendimento à legislação?</span>
+                  <span className="text-base md:text-lg font-bold">Qual a diferença entre o Insight e um serviço humano de validação?</span>
                   <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4">
                     <ChevronDown />
                   </span>
                 </summary>
                 <div className="p-3 md:p-4 font-light text-sm md:text-base">
-                  O Insight automatiza a identificação de requisitos legais aplicáveis à sua empresa, sugere planos de ação e cria documentos necessários para garantir conformidade, tudo isso com base em uma extensa biblioteca de evidências legais acumuladas ao longo de 33 anos.
+                  Serviços humanos validam o que já aconteceu — olham o passado. O Insight atua preventivamente, orientando antes, durante e depois da conformidade. Ele alerta, sugere evidências, organiza planos de ação e direciona o usuário em tempo real, sem depender de agenda humana ou custo variável.
                 </div>
               </details>
             </div>
@@ -175,15 +156,13 @@ function App() {
             <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-4">
               <details className="group">
                 <summary className="flex justify-between items-center font-normal cursor-pointer list-none p-3 md:p-4">
-                  <span className="text-base md:text-lg font-bold">O Insight realmente funciona para qualquer empresa?</span>
-                  <span className="transition group-open:rotate-180 shrink-0 ml-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#c5ff00]">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                  <span className="text-base md:text-lg font-bold">Preciso ter conhecimento jurídico para usar o Insight?</span>
+                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4">
+                    <ChevronDown />
                   </span>
                 </summary>
                 <div className="p-3 md:p-4 font-light text-sm md:text-base">
-                  Sim, o Insight foi desenvolvido para atender empresas de todos os portes e segmentos. Sua base de conhecimento abrangente permite adaptação às necessidades específicas de cada organização, independentemente do setor de atuação. O sistema é flexível e personaliza suas recomendações de acordo com o perfil da empresa, garantindo relevância e eficácia para qualquer negócio que precise gerenciar conformidade legal.
+                  Não. O Insight foi desenvolvido com linguagem não jurídica e fluxo orientado por perguntas inteligentes. O usuário não precisa saber o que provar — o sistema já sabe. É ideal para gestores, equipes operacionais e qualquer profissional que precise garantir conformidade sem depender de advogados ou consultores externos.
                 </div>
               </details>
             </div>
@@ -191,15 +170,13 @@ function App() {
             <div className="bg-white rounded-xl shadow-md p-4 md:p-6">
               <details className="group">
                 <summary className="flex justify-between items-center font-normal cursor-pointer list-none p-3 md:p-4">
-                  <span className="text-base md:text-lg font-bold">Quais tipos de requisitos legais o Insight atende?</span>
-                  <span className="transition group-open:rotate-180 shrink-0 ml-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#c5ff00]">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                  <span className="text-base md:text-lg font-bold">Como o Insight garante conformidade em múltiplos requisitos ao mesmo tempo?</span>
+                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4">
+                    <ChevronDown />
                   </span>
                 </summary>
                 <div className="p-3 md:p-4 font-light text-sm md:text-base">
-                  O Insight atende a uma ampla gama de requisitos legais, incluindo normas trabalhistas, ambientais, de saúde e segurança ocupacional, regulamentações setoriais específicas, exigências fiscais e tributárias, entre outros. A plataforma é constantemente atualizada para incorporar novas legislações e mudanças regulatórias, garantindo que sua empresa esteja sempre em conformidade com as mais recentes exigências legais aplicáveis ao seu negócio.
+                  O Insight identifica automaticamente as conexões entre requisitos legais. Uma única evidência pode responder simultaneamente a requisitos ambientais, trabalhistas e de saúde e segurança. Enquanto o serviço humano valida um requisito por vez, o Insight cruza dados e entrega conformidade em escala — com padrão técnico e replicável.
                 </div>
               </details>
             </div>
@@ -227,7 +204,7 @@ function App() {
                 className="absolute -top-2 -right-2 bg-gray-800 cursor-pointer duration-300 transition-all hover:scale-105 text-white rounded-full w-6 h-6 p-1 flex items-center justify-center"
                 onClick={() => setShowFloatingVideo(false)}
               >
-                <LucideX />
+                <LucideX size={14} />
               </button>
             </div>
           </div>
