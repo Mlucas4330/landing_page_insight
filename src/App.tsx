@@ -1,4 +1,4 @@
-import { ChevronDown, LucideX, FileSearch, BookOpen, Cpu } from 'lucide-react';
+import { ChevronDown, LucideX, FileSearch, BookOpen, MousePointerClick, Sparkles, Cpu, CheckCircle2 } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
@@ -41,10 +41,10 @@ function App() {
 
         <TryLegnet scrollToForm={scrollToForm} />
 
-        {/* Seção para empresas */}
+        {/* Intro */}
         <section className="mx-4 md:mx-8 px-4 md:px-8 my-10 md:my-16 py-10 md:py-16 bg-white rounded-3xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">
-            Gestor, serviço humano valida o passado. O Insight constrói e mantém a conformidade no presente e no futuro.
+            Insight – Avaliação e Validação Inteligente de Requisitos Legais
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl font-light text-center max-w-3xl mx-auto mb-8 md:mb-12">
@@ -60,15 +60,15 @@ function App() {
             </div>
 
             <div className="shadow-md p-5 md:p-6 rounded-xl">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Múltiplos requisitos atendidos em apenas dois cliques</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Gestor, serviço humano valida o passado.</h3>
               <p className="font-light text-sm md:text-base">
-                Uma única evidência pode responder simultaneamente a requisitos ambientais, trabalhistas e de saúde e segurança. O Insight identifica essas conexões automaticamente.
+                O Insight constrói e mantém a conformidade no presente e no futuro.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Seção de features */}
+        {/* O que você realmente ganha — 5 features */}
         <section className="py-10 md:py-16 px-4 md:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">
             O que você realmente ganha com o Insight?
@@ -78,55 +78,223 @@ function App() {
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+            {/* 1 */}
             <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl">
               <div className="flex justify-center mb-4">
                 <FileSearch size={32} className="text-[#c5ff00]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Avaliação e Validação Inteligente</h3>
-              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
-                O sistema orienta antes, durante e depois — não apenas valida no final.
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Avaliação e Validação Inteligente de Evidências Legais</h3>
+              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base font-medium">
+                Diferencial exclusivo: o sistema orienta antes, durante e depois — não apenas valida no final.
               </p>
-              <p className="font-light text-sm md:text-base">
-                O Insight analisa o contexto do requisito, sugere evidências aderentes à legislação, cria automaticamente planos de ação e documentos, e reduz drasticamente o risco de evidência fraca ou inválida.
-              </p>
+              <ul className="space-y-2">
+                {[
+                  'O Insight analisa o contexto do requisito',
+                  'Sugere evidências aderentes à legislação',
+                  'Cria automaticamente planos de ação e documentos',
+                  'Reduz drasticamente o risco de evidência fraca ou inválida',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base">
+                    <span className="text-[#c5ff00] font-bold shrink-0">•</span> {item}
+                  </li>
+                ))}
+              </ul>
             </div>
 
+            {/* 2 */}
             <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl">
               <div className="flex justify-center mb-4">
                 <BookOpen size={32} className="text-[#c5ff00]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Biblioteca viva com 33 anos de evidências</h3>
-              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Biblioteca viva com 33 anos de evidências legais</h3>
+              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base font-medium">
                 O usuário não precisa saber o que provar. O sistema já sabe.
               </p>
+              <ul className="space-y-2">
+                {[
+                  'Evidências construídas ao longo de 33 anos de prática legal',
+                  'Atualizadas conforme mudanças de leis e interpretações',
+                  'Elimina tentativa e erro do usuário',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base">
+                    <span className="text-[#c5ff00] font-bold shrink-0">•</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 3 */}
+            <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl">
+              <div className="flex justify-center mb-4">
+                <MousePointerClick size={32} className="text-[#c5ff00]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Múltiplos requisitos atendidos em apenas dois cliques</h3>
+              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
+                O Insight identifica automaticamente essas conexões. O serviço humano valida um requisito por vez.
+              </p>
               <p className="font-light text-sm md:text-base">
-                Evidências construídas ao longo de 33 anos de prática legal, atualizadas conforme mudanças de leis e interpretações. Elimina tentativa e erro do usuário.
+                Uma única evidência pode responder simultaneamente a requisitos ambientais, trabalhistas e de saúde e segurança.
               </p>
             </div>
 
+            {/* 4 */}
+            <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl">
+              <div className="flex justify-center mb-4">
+                <Sparkles size={32} className="text-[#c5ff00]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Experiência 100% temática, intuitiva e guiada</h3>
+              <ul className="space-y-2">
+                {[
+                  'Linguagem não jurídica',
+                  'Fluxo orientado por perguntas inteligentes',
+                  'Ideal para quem não é advogado nem consultor',
+                  'Reduz dependência de terceiros',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base">
+                    <span className="text-[#c5ff00] font-bold shrink-0">•</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 5 */}
             <div className="shadow-lg bg-white p-5 md:p-6 rounded-xl sm:col-span-2 lg:col-span-1">
               <div className="flex justify-center mb-4">
                 <Cpu size={32} className="text-[#c5ff00]" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">A máquina trabalha para o usuário</h3>
-              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base">
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">A máquina trabalha para o usuário (não o contrário)</h3>
+              <p className="font-light text-center mb-3 md:mb-4 text-sm md:text-base font-medium">
                 Enquanto outros sistemas pedem trabalho, o Insight entrega decisão.
               </p>
-              <p className="font-light text-sm md:text-base">
-                O usuário não alimenta o sistema. O sistema alerta, sugere, organiza, valida e direciona — com linguagem não jurídica, fluxo guiado e ideal para quem não é advogado nem consultor.
-              </p>
+              <p className="font-light text-sm md:text-base mb-2">O usuário não alimenta o sistema. O sistema:</p>
+              <ul className="space-y-2">
+                {['Alerta', 'Sugere', 'Organiza', 'Valida', 'Direciona'].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base">
+                    <span className="text-[#c5ff00] font-bold shrink-0">•</span> {item}
+                  </li>
+                ))}
+              </ul>
             </div>
+
           </div>
         </section>
 
         <TryLegnet scrollToForm={scrollToForm} />
 
-        {/* Seção ISO */}
+        {/* Comparativo */}
+        <section className="mx-4 md:mx-8 px-4 md:px-8 my-10 md:my-16 py-10 md:py-16 bg-white rounded-3xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">
+            Comparativo
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl font-light text-center max-w-3xl mx-auto mb-8 md:mb-12">
+            Não oferecemos um serviço de validação porque conformidade não pode depender de agenda humana. O Insight é um avaliador legal digital que trabalha todos os dias, em todos os requisitos, sem custo variável.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="shadow-md p-5 md:p-6 rounded-xl border border-gray-200">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-center text-gray-500">Concorrente</h3>
+              <ul className="space-y-3">
+                {[
+                  'Validação manual',
+                  'Serviço pontual',
+                  'Dependente de pessoas',
+                  'Olha o passado',
+                  'Risco de subjetividade',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base text-gray-500">
+                    <span className="shrink-0">✗</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="shadow-md p-5 md:p-6 rounded-xl border-2 border-[#c5ff00]">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">Agile Insight</h3>
+              <ul className="space-y-3">
+                {[
+                  'Avaliação e validação automatizada',
+                  'Conformidade contínua',
+                  'Independente de escala',
+                  'Atua preventivamente',
+                  'Padrão técnico e replicável',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base">
+                    <span className="text-[#c5ff00] font-bold shrink-0">✓</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* O que muda na prática */}
+        <section className="py-10 md:py-16 px-4 md:px-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+            O que muda na prática para a empresa
+          </h2>
+
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="shadow-md bg-white p-5 md:p-6 rounded-xl border border-gray-200">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-center text-gray-500">Concorrente</h3>
+              <ul className="space-y-3">
+                {[
+                  'O usuário preenche evidências',
+                  'Alguém valida depois',
+                  'O risco aparece tarde',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base text-gray-500">
+                    <span className="shrink-0">✗</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="shadow-md bg-white p-5 md:p-6 rounded-xl border-2 border-[#c5ff00]">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">Insight Legnet</h3>
+              <ul className="space-y-3">
+                {[
+                  'O sistema orienta o que fazer',
+                  'Sugere evidências, documentos e planos de ação',
+                  'A não conformidade é evitada, não apenas identificada',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 font-light text-sm md:text-base">
+                    <span className="text-[#c5ff00] font-bold shrink-0">✓</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Diferenciais exclusivos */}
+        <section className="mx-4 md:mx-8 px-4 md:px-8 my-10 md:my-16 py-10 md:py-16 bg-[#333] rounded-3xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 md:mb-12">
+            Diferencial exclusivo do Insight
+          </h2>
+
+          <div className="grid sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto">
+            {[
+              '33 anos de evidências legais embarcadas',
+              'Linguagem temática e amigável (não jurídica)',
+              'Conexão automática entre requisitos legais',
+              'A máquina trabalha para o usuário, não o contrário',
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white/10 rounded-xl p-4">
+                <CheckCircle2 size={20} className="text-[#c5ff00] shrink-0 mt-0.5" />
+                <p className="text-white font-light text-sm md:text-base">{item}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <TryLegnet scrollToForm={scrollToForm} />
+
+        {/* ISO */}
         <section className="mx-4 md:mx-8 my-10 md:my-16 p-6 md:p-8 bg-[#c2c0c0] rounded-3xl">
           <p className="text-lg sm:text-xl md:text-2xl font-bold text-center text-white mx-auto max-w-3xl leading-relaxed">
             Atuamos com padrões reconhecidos mundialmente, garantindo qualidade, segurança e eficácia em todos os processos.
           </p>
-
           <img
             src={isos}
             alt="Certificações ISO e ONU"
@@ -139,13 +307,12 @@ function App() {
         {/* FAQ */}
         <section className="py-10 md:py-16 px-4 md:px-8">
           <div className="max-w-3xl mx-auto">
+
             <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-4">
               <details className="group">
-                <summary className="flex justify-between items-center font-normal cursor-pointer list-none p-3 md:p-4">
+                <summary className="flex justify-between items-center cursor-pointer list-none p-3 md:p-4">
                   <span className="text-base md:text-lg font-bold">Qual a diferença entre o Insight e um serviço humano de validação?</span>
-                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4">
-                    <ChevronDown />
-                  </span>
+                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4"><ChevronDown /></span>
                 </summary>
                 <div className="p-3 md:p-4 font-light text-sm md:text-base">
                   Serviços humanos validam o que já aconteceu — olham o passado. O Insight atua preventivamente, orientando antes, durante e depois da conformidade. Ele alerta, sugere evidências, organiza planos de ação e direciona o usuário em tempo real, sem depender de agenda humana ou custo variável.
@@ -155,11 +322,9 @@ function App() {
 
             <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-4">
               <details className="group">
-                <summary className="flex justify-between items-center font-normal cursor-pointer list-none p-3 md:p-4">
+                <summary className="flex justify-between items-center cursor-pointer list-none p-3 md:p-4">
                   <span className="text-base md:text-lg font-bold">Preciso ter conhecimento jurídico para usar o Insight?</span>
-                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4">
-                    <ChevronDown />
-                  </span>
+                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4"><ChevronDown /></span>
                 </summary>
                 <div className="p-3 md:p-4 font-light text-sm md:text-base">
                   Não. O Insight foi desenvolvido com linguagem não jurídica e fluxo orientado por perguntas inteligentes. O usuário não precisa saber o que provar — o sistema já sabe. É ideal para gestores, equipes operacionais e qualquer profissional que precise garantir conformidade sem depender de advogados ou consultores externos.
@@ -167,19 +332,30 @@ function App() {
               </details>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-4 md:p-6">
+            <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-4">
               <details className="group">
-                <summary className="flex justify-between items-center font-normal cursor-pointer list-none p-3 md:p-4">
+                <summary className="flex justify-between items-center cursor-pointer list-none p-3 md:p-4">
                   <span className="text-base md:text-lg font-bold">Como o Insight garante conformidade em múltiplos requisitos ao mesmo tempo?</span>
-                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4">
-                    <ChevronDown />
-                  </span>
+                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4"><ChevronDown /></span>
                 </summary>
                 <div className="p-3 md:p-4 font-light text-sm md:text-base">
                   O Insight identifica automaticamente as conexões entre requisitos legais. Uma única evidência pode responder simultaneamente a requisitos ambientais, trabalhistas e de saúde e segurança. Enquanto o serviço humano valida um requisito por vez, o Insight cruza dados e entrega conformidade em escala — com padrão técnico e replicável.
                 </div>
               </details>
             </div>
+
+            <div className="bg-white rounded-xl shadow-md p-4 md:p-6">
+              <details className="group">
+                <summary className="flex justify-between items-center cursor-pointer list-none p-3 md:p-4">
+                  <span className="text-base md:text-lg font-bold">Por que o Insight não é um serviço de validação?</span>
+                  <span className="transition group-open:rotate-180 text-[#c5ff00] shrink-0 ml-4"><ChevronDown /></span>
+                </summary>
+                <div className="p-3 md:p-4 font-light text-sm md:text-base">
+                  Porque conformidade não pode depender de agenda humana. O Insight é um avaliador legal digital que trabalha todos os dias, em todos os requisitos, sem custo variável — garantindo que a não conformidade seja evitada, não apenas identificada.
+                </div>
+              </details>
+            </div>
+
           </div>
         </section>
 
